@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anh Kiệt - Premium Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Smooth cursor effect */
-        .cursor-dot {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: #00d4ff;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: screen;
-            display: none;
-        }
-
-        .cursor-dot-outline {
-            position: fixed;
-            width: 35px;
-            height: 35px;
-            border: 2px solid #00d4ff;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            display: none;
-            mix-blend-mode: screen;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Portfolio | Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="root"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-dot-outline"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+<div class="cursor"></div>
+
+<header>
+  <h1 class="logo">Kiet.dev</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hello, I'm</h2>
+  <h1 class="glow">Anh Kiệt</h1>
+  <p class="typing"></p>
+  <button onclick="scrollToSection('projects')">View Projects</button>
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I am a Graphic Design student passionate about futuristic UI/UX,
+    combining motion, color, and structure to create premium digital experiences.
+  </p>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://picsum.photos/400/300?1">
+      <div class="overlay">UI Design Project</div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?2">
+      <div class="overlay">3D Web Concept</div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?3">
+      <div class="overlay">Branding</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <input placeholder="Your Name">
+  <input placeholder="Email">
+  <textarea placeholder="Message"></textarea>
+  <button>Send</button>
+</section>
+
+<footer>
+  <p>© 2026 Anh Kiệt</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
